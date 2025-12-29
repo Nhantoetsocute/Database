@@ -213,6 +213,7 @@ CREATE TABLE Bai_Tap_Ve_Nha (
     Ngay_Giao DATETIME2 DEFAULT SYSDATETIME(),
     Han_Nop DATETIME2 NOT NULL,
     Thuong_Apos INT DEFAULT 0,
+    Link NVARCHAR(500),
     Trang_Thai NVARCHAR(20) CHECK (Trang_Thai IN (N'Dang_Mo', N'Dong', N'Huy')) DEFAULT N'Dang_Mo',
     FOREIGN KEY (Ma_Bai_Tap_Goc) REFERENCES Bai_Tap_Goc(Ma_Bai_Tap_Goc),
     FOREIGN KEY (Ma_Lop) REFERENCES Lop_Hoc(Ma_Lop)
